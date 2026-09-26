@@ -1,0 +1,1339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Indira Gandhi Institute — Admission Form</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
+<style>
+  html,body{font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif}
+</style>
+<style>
+  :root{
+    --bg:#ffd21c;
+    --surface:#fffdf8;
+    --surface-2:#f7f3e8;
+    --border:#111111;
+    --text:#111111;
+    --muted:#55504a;
+    --pink:#ff3b82;
+    --purple:#7857f6;
+    --green:#49d447;
+    --lime:#b7e51d;
+    --orange:#ffb52e;
+    --blue:#57a7ff;
+    --shadow:7px 8px 0 #111;
+    --radius:18px;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;min-height:100%;font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--text)}
+  body{
+    min-height:100vh;
+    background:
+      radial-gradient(circle at 5% 18%, var(--pink) 0 11%, transparent 11.2%),
+      radial-gradient(circle at 100% 82%, var(--purple) 0 14%, transparent 14.2%),
+      var(--bg);
+    background-attachment:fixed;
+    -webkit-font-smoothing:antialiased;
+  }
+  body:before{
+    content:"";position:fixed;left:-70px;top:230px;width:230px;height:230px;background:var(--pink);
+    border-radius:50%;z-index:-1;
+  }
+  body:after{
+    content:"";position:fixed;right:-80px;bottom:-70px;width:280px;height:280px;background:var(--purple);
+    border-radius:50%;z-index:-1;
+  }
+  .page{max-width:760px;margin:0 auto;padding:28px 18px 55px;min-height:100vh}
+  .hidden{display:none!important}
+  .topbar{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:24px}.topbar>div:first-child{min-width:0}.topbar>div:last-child{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+  .brand{display:flex;align-items:flex-start;gap:0;min-width:0}
+  .brand-name{margin:0;font-weight:900;font-size:34px;line-height:.98;letter-spacing:-.035em}
+  .brand-sub{margin:7px 0 0;font-size:14px;font-weight:800;letter-spacing:.01em}
+  .link-btn{
+    background:#fff;border:3px solid #111;color:#111;padding:9px 13px;border-radius:12px;
+    font-size:12px;font-weight:800;font-family:inherit;cursor:pointer;box-shadow:3px 4px 0 #111
+  }
+  .link-btn:active,.btn:active{transform:translate(2px,2px);box-shadow:1px 2px 0 #111}
+  .card{
+    background:var(--surface);border:3px solid #111;border-radius:24px;padding:24px 20px;
+    box-shadow:var(--shadow);margin-bottom:18px
+  }
+  .card h1{font-size:25px;line-height:1.05;margin:0 0 8px;font-weight:900}
+  .institute-address{background:#fff;border:3px solid #111;border-radius:16px;padding:13px 14px;margin:-4px 0 20px;line-height:1.45;box-shadow:4px 4px 0 #111;position:relative;overflow:hidden}.institute-address:before{content:"";position:absolute;left:0;top:0;bottom:0;width:7px;background:var(--pink)}.address-kicker{font-size:9px;font-weight:900;letter-spacing:.14em;color:#555;margin-bottom:2px}.address-title{font-size:14px;font-weight:900;margin-bottom:4px}.address-text{font-size:12px;font-weight:700;color:#333;max-width:650px}.section-address{display:flex;align-items:flex-start;gap:12px;background:#fff;border:3px solid #111;border-radius:16px;padding:14px 15px;margin:18px 0 24px;box-shadow:5px 5px 0 #111}.section-address-mark{width:42px;height:42px;flex:0 0 42px;border:3px solid #111;border-radius:11px;background:#ffd21c;box-shadow:3px 3px 0 #111;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:900}.section-address-content{min-width:0;flex:1}.section-address-title{font-size:16px;font-weight:900;margin-bottom:6px}.section-address-label{display:inline-block;font-size:9px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;background:#ff3b82;border:2px solid #111;border-radius:999px;padding:3px 7px;margin-bottom:6px}.section-address-text{font-size:12.5px;line-height:1.55;font-weight:700;color:#333}.admin-address{margin-top:20px}.card h2{font-size:19px;margin:0 0 6px}
+  .lead{color:var(--muted);font-size:13.5px;margin:0 0 20px;line-height:1.45;font-weight:600}
+  .field{margin-bottom:15px}
+  .field label{display:block;font-size:12px;font-weight:800;margin-bottom:6px}
+  .field select{width:100%;background:#fff;border:3px solid #111;color:#111;padding:13px 14px;border-radius:12px;font-size:14px;font-family:inherit;font-weight:700;box-shadow:3px 3px 0 #111;outline:none;}
+  .field select:focus{box-shadow:3px 3px 0 var(--purple);}
+  .field input[type=text],.field input[type=tel],.field input[type=password],.field textarea{
+    width:100%;background:#fff;border:3px solid #111;color:#111;padding:12px 13px;border-radius:12px;
+    font-size:14px;font-family:inherit;outline:none
+  }
+  .field textarea{resize:vertical;min-height:78px}
+  .field input:focus,.field textarea:focus{box-shadow:3px 3px 0 var(--purple)}
+  .field .err{color:#d71920;font-size:11.5px;margin-top:5px;display:none;font-weight:700}
+  .field.invalid input,.field.invalid textarea{border-color:#d71920}
+  .field.invalid .err{display:block}
+  .file-drop{
+    border:3px dashed #111;border-radius:12px;padding:15px;text-align:center;background:#fff;
+    cursor:pointer;transition:.15s
+  }
+  .file-drop:hover{transform:translateY(-1px);box-shadow:3px 3px 0 #111}
+  .file-drop{position:relative;overflow:hidden}.file-drop input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:pointer}
+  .file-drop .fd-title{font-size:13px;font-weight:800;margin-bottom:3px}
+  .file-drop .fd-sub{font-size:11px;color:var(--muted);font-weight:600}
+  .file-drop.has-file{border-style:solid;background:#fffbe0}
+  .file-drop .fd-name{font-weight:900}
+  .file-previews{display:flex;gap:10px;flex-wrap:wrap;margin-top:9px}
+  .file-previews img{width:80px;height:80px;object-fit:cover;border:3px solid #111;border-radius:10px;background:#fff}
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:7px;border:3px solid #111;
+    border-radius:12px;font-family:inherit;font-size:13.5px;font-weight:900;padding:12px 17px;
+    cursor:pointer;transition:transform .08s;box-shadow:4px 4px 0 #111;width:100%;background:#fff;color:#111
+  }
+  .btn:disabled{opacity:.55;cursor:not-allowed}
+  .btn-primary{background:#ffd21c}
+  .btn-ghost{background:#fff}
+  .btn-ok{background:var(--green)}
+  .btn-bad{background:#ff668f}
+  .btn-reopen{background:var(--purple);color:#fff}
+  .btn-sm{width:auto;padding:9px 12px;font-size:12px}
+  .btn-row{display:flex;gap:10px;flex-wrap:wrap}
+  .btn-row .btn{flex:1;min-width:120px}
+  .banner{border:3px solid #111;border-radius:12px;padding:10px 12px;font-size:12.5px;margin-bottom:15px;display:none;font-weight:700;background:#fff}
+  .banner.show{display:block}.banner.error{background:#ffd9e4}.banner.ok{background:#d9ffd8}
+  .form-id-box{background:#ffe86a;border:3px solid #111;border-radius:14px;padding:16px;text-align:center;margin:16px 0 20px;box-shadow:4px 4px 0 #111}
+  .form-id-box .fid-label{font-size:11px;font-weight:800;margin-bottom:5px}
+  .form-id-box .fid-value{font-size:21px;font-weight:900;letter-spacing:.03em}
+  .login-card{max-width:430px;margin:35px auto 0}
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:17px}
+  .stat{background:#fff;border:3px solid #111;border-radius:14px;padding:12px 8px;text-align:center;box-shadow:3px 3px 0 #111}
+  .stat .stat-num{font-size:18px;font-weight:900}.stat .stat-label{font-size:10px;font-weight:800;margin-top:2px}
+  .admin-search{margin-bottom:14px}
+  .admin-search input{width:100%;background:#fff;border:3px solid #111;color:#111;padding:12px 13px;border-radius:12px;font-size:14px;font-family:inherit;font-weight:700;outline:none;box-shadow:3px 3px 0 #111}
+  .admin-search input:focus{box-shadow:3px 3px 0 var(--purple)}
+.admin-card-wrap{content-visibility:auto;contain-intrinsic-size:180px;}
+#listContainer{contain:layout style;}
+
+.sub-card.admin-search-hidden{display:none!important}
+.admin-card-wrap.admin-search-hidden{display:none!important}
+  .tabs{display:flex;gap:8px;margin-bottom:18px;overflow-x:auto;padding-bottom:4px}
+  .tab{background:#fff;border:3px solid #111;color:#111;padding:8px 12px;border-radius:11px;font-size:12px;font-weight:900;cursor:pointer;white-space:nowrap;font-family:inherit;box-shadow:3px 3px 0 #111}
+  .tab.active{background:#ffd21c}
+  .admin-header{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:16px}
+  .admin-header h1{font-size:21px;margin:0;font-weight:900}
+  .admin-actions{display:flex;gap:7px;flex-wrap:wrap}
+  .sub-card{background:#fff;border:3px solid #111;border-radius:16px;padding:16px;margin-bottom:14px;box-shadow:5px 5px 0 #111}
+  .sub-top{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;margin-bottom:10px}
+  .sub-name{font-weight:900;font-size:16px;margin:0}.sub-meta{color:#555;font-size:11.5px;margin:3px 0 0;font-weight:700}
+  .badge{font-size:10px;font-weight:900;padding:5px 9px;border:2px solid #111;border-radius:999px;flex-shrink:0;text-transform:capitalize}
+  .badge.pending{background:#ffe36d}.badge.confirmed{background:#74e96d}.badge.rejected{background:#ff83a8}
+  .badge.reopened{background:#a88bff;color:#fff}
+  .sub-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px 12px;background:#f7f3e8;border:2px solid #111;border-radius:12px;padding:12px;margin-bottom:13px}
+  .sub-grid .full{grid-column:1/-1}.sub-grid .g-label{font-size:9.5px;font-weight:900;color:#666;margin-bottom:2px}.sub-grid .g-value{font-size:12.5px;word-break:break-word;font-weight:650}
+  .edit-panel{border-top:2px dashed #111;margin-top:13px;padding-top:13px}
+  .edit-panel .edit-title{font-size:13px;color:#d7195c;margin:0 0 11px;font-weight:900}
+  .reason-box{background:#fff0f5;border:2px solid #111;border-radius:10px;padding:10px;margin:10px 0;font-size:12px}
+  .reason-box strong{font-weight:900}
+  .signature-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
+  .signature-box{background:#fff;border:2px solid #111;border-radius:10px;padding:8px}
+  .signature-box img{width:100%;height:80px;object-fit:contain;background:#fafafa;border:1px dashed #777;border-radius:6px}
+  .toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:#111;color:#fff;border:3px solid #fff;padding:10px 16px;border-radius:12px;font-size:12.5px;font-weight:800;opacity:0;pointer-events:none;transition:.2s;z-index:50;max-width:90%;text-align:center;box-shadow:4px 4px 0 #fff}
+  .toast.show{opacity:1;bottom:34px}
+  .empty{text-align:center;color:#555;font-size:13px;padding:28px 10px;font-weight:700}
+  .page-footer{text-align:center;color:#111;font-size:11px;margin-top:28px;font-weight:800}
+  .modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.6);display:flex;align-items:center;justify-content:center;z-index:60;padding:18px}
+  .modal-card{background:#fff;border:3px solid #111;border-radius:18px;padding:21px 18px;max-width:420px;width:100%;box-shadow:8px 8px 0 #111}
+  .modal-card h2{font-size:18px;margin:0 0 6px;font-weight:900}
+  .modal-card .lead{margin-bottom:14px}
+  .whatsapp-float{
+    position:fixed;
+    right:22px;
+    bottom:22px;
+    width:68px;
+    height:68px;
+    border-radius:50%;
+    background:#f5c542;
+    border:3px solid #fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    z-index:100;
+    box-shadow:0 0 0 5px rgba(245,197,66,.14),0 8px 24px rgba(0,0,0,.35);
+    text-decoration:none;
+    transition:transform .15s ease,box-shadow .15s ease;
+    -webkit-tap-highlight-color:transparent;
+  }
+  .whatsapp-float:hover{
+    transform:scale(1.06);
+    box-shadow:0 0 0 7px rgba(245,197,66,.18),0 10px 28px rgba(0,0,0,.4);
+  }
+  .whatsapp-float:active{transform:scale(.96)}
+  .whatsapp-float svg{width:38px;height:38px;display:block}
+  @media(max-width:520px){
+    .whatsapp-float{right:18px;bottom:18px;width:64px;height:64px}
+    .whatsapp-float svg{width:36px;height:36px}
+  }
+  .brand-name{font-size:34px!important;line-height:1.02!important;letter-spacing:-.04em}.brand-sub{font-size:19.5px!important;font-weight:00!important;margin-top:4px!important}
+  @media(max-width:520px){
+    .stats{grid-template-columns:repeat(2,1fr)}.sub-grid{grid-template-columns:1fr}
+    .signature-row{grid-template-columns:1fr}
+    .topbar{align-items:flex-start}.topbar>div:last-child{justify-content:flex-end}.link-btn{padding:7px 10px!important;font-size:11px!important}
+    .page{padding-left:13px;padding-right:13px}.brand-name{font-size:28px!important}.section-address{padding:12px}.section-address-text{font-size:11px}.address-text{font-size:11.5px}
+  }
+
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header class="topbar">
+    <div class="brand">
+      <div>
+        <p class="brand-name">Indira Gandhi Institute</p>
+        <p class="brand-sub">Computer Class Admissions</p>
+      </div>
+    </div>
+    <div style="display:flex;gap:8px;">
+      <button class="link-btn" onclick="goToPublic()">Home</button>
+      <button class="link-btn" onclick="goToStatusCheck()">Check status</button>
+      <button class="link-btn" id="adminEntryBtn" onclick="goToAdmin()">Admin</button>
+    </div>
+  </header>
+
+  <!-- PUBLIC VIEW -->
+  <main id="publicView">
+    <section class="card" id="formSection">
+      <h1>Apply for the computer class</h1>
+      <p class="lead">Fill in your details below. You'll get an application ID once it's submitted.</p>
+
+      <div class="institute-address">
+          <div class="address-kicker">INDIRA GANDHI INSTITUTE</div>
+          <div class="address-title">Institute Address</div>
+          <div class="address-text">87/14, near Nooh Masjid, Joga Bai Extension, Block F, Jamia Nagar, Okhla, New Delhi, Delhi 110025</div>
+        </div>
+
+      <div class="banner error" id="formBanner"></div>
+
+      <form id="admissionForm" novalidate>
+        <div class="field" id="f-name">
+          <label for="in-name">Full name</label>
+          <input type="text" id="in-name" autocomplete="name">
+          <div class="err">Enter the applicant's full name.</div>
+        </div>
+
+        <div class="field" id="f-father">
+          <label for="in-father">Father's name</label>
+          <input type="text" id="in-father" autocomplete="off">
+          <div class="err">Enter the father's name.</div>
+        </div>
+
+        <div class="field" id="f-photo">
+          <label>Passport size photo (student)</label>
+          <label class="file-drop" id="photoDrop">
+            <input type="file" id="in-photo" accept="image/*">
+            <div class="fd-title" id="fdPhotoTitle">Tap to upload the student's photo</div>
+            <div class="fd-sub" id="fdPhotoSub">JPG or PNG, up to 2 MB</div>
+          </label>
+          <div class="file-previews"><img id="photoPreview" class="hidden" alt="Student photo preview"></div>
+          <div class="err">Upload a passport size photo of the student.</div>
+        </div>
+
+      <div class="field" id="f-course">
+        <label for="in-course">Select course</label>
+        <select id="in-course">
+          <option value="">Select a course</option>
+          <option value="Basic Computer Course">Basic Computer Course</option>
+          <option value="Advanced Computer Course">Advanced Computer Course</option>
+          <option value="Tally & Accounting">Tally &amp; Accounting</option>
+          <option value="DTP & Graphic Design">DTP &amp; Graphic Design</option>
+          <option value="MS Office">MS Office</option>
+        </select>
+        <div class="err">Select a course.</div>
+      </div>
+        <div class="field" id="f-father-photo">
+          <label>Passport size photo (father / guardian)</label>
+          <label class="file-drop" id="fatherPhotoDrop">
+            <input type="file" id="in-father-photo" accept="image/*">
+            <div class="fd-title" id="fdFatherPhotoTitle">Tap to upload father's / guardian's photo</div>
+            <div class="fd-sub" id="fdFatherPhotoSub">JPG or PNG, up to 2 MB</div>
+          </label>
+          <div class="file-previews"><img id="fatherPhotoPreview" class="hidden" alt="Father photo preview"></div>
+          <div class="err">Upload the father's / guardian's photo.</div>
+        </div>
+
+        <div class="field" id="f-address">
+          <label for="in-address">Applicant address</label>
+          <textarea id="in-address" autocomplete="street-address"></textarea>
+          <div class="err">Enter the applicant address.</div>
+        </div>
+
+        <div class="field" id="f-phone">
+          <label for="in-phone">Phone number</label>
+          <input type="tel" id="in-phone" inputmode="numeric" maxlength="10" autocomplete="tel">
+          <div class="err">Enter a valid 10-digit phone number.</div>
+        </div>
+
+        <div class="field" id="f-aadhar">
+          <label for="in-aadhar">Aadhar number</label>
+          <input type="text" id="in-aadhar" inputmode="numeric" maxlength="14" placeholder="XXXX XXXX XXXX">
+          <div class="err">Enter a valid 12-digit Aadhar number.</div>
+        </div>
+
+        <div class="field" id="f-pdf">
+          <label>Aadhar card (PDF)</label>
+          <label class="file-drop" id="fileDrop">
+            <input type="file" id="in-pdf" accept="application/pdf,.pdf">
+            <div class="fd-title" id="fdTitle">Tap to upload the Aadhar card PDF</div>
+            <div class="fd-sub" id="fdSub">PDF only, up to 5 MB</div>
+          </label>
+          <div class="err">Upload the Aadhar card as a PDF (max 5 MB).</div>
+        </div>
+
+        <div class="field" id="f-student-sign">
+          <label>Student signature</label>
+          <label class="file-drop" id="studentSignDrop">
+            <input type="file" id="in-student-sign" accept="image/*">
+            <div class="fd-title" id="fdStudentSignTitle">Tap to upload student signature</div>
+            <div class="fd-sub" id="fdStudentSignSub">JPG or PNG, up to 2 MB</div>
+          </label>
+          <div class="file-previews"><img id="studentSignPreview" class="hidden" alt="Student signature"></div>
+          <div class="err">Upload the student's signature.</div>
+        </div>
+
+        <div class="field" id="f-father-sign">
+          <label>Father / guardian signature</label>
+          <label class="file-drop" id="fatherSignDrop">
+            <input type="file" id="in-father-sign" accept="image/*">
+            <div class="fd-title" id="fdFatherSignTitle">Tap to upload father / guardian signature</div>
+            <div class="fd-sub" id="fdFatherSignSub">JPG or PNG, up to 2 MB</div>
+          </label>
+          <div class="file-previews"><img id="fatherSignPreview" class="hidden" alt="Father signature"></div>
+          <div class="err">Upload the father / guardian signature.</div>
+        </div>
+
+        <button type="submit" class="btn btn-primary" id="submitBtn">Submit application</button>
+      </form>
+    </section>
+
+    <section class="card hidden" id="successSection">
+      <h1>Application submitted</h1>
+      <p class="lead">Keep this ID safe — you'll need it if you follow up with the institute about your admission.</p>
+      <div class="form-id-box">
+        <div class="fid-label">Your application ID</div>
+        <div class="fid-value" id="successFormId">—</div>
+      </div>
+      <button class="btn btn-ghost" onclick="resetForm()">Submit another application</button>
+    </section>
+  </main>
+
+  <!-- CHECK STATUS VIEW -->
+  <main id="statusView" class="hidden">
+    <section class="card" id="statusSection">
+      <h1>Check your application status</h1>
+      <p class="lead">Check using either your application ID, or your registered phone number.</p>
+      <div class="banner error" id="statusBanner"></div>
+      <div class="field" id="f-status-id">
+        <label for="in-status-id">Application ID</label>
+        <input type="text" id="in-status-id" placeholder="Example: IGI-20260926-1234" autocomplete="off">
+        <div class="err">Enter an application ID.</div>
+      </div>
+      <div style="text-align:center;font-size:11px;font-weight:900;margin:0 0 12px;">OR</div>
+      <div class="field" id="f-status-phone">
+        <label for="in-status-phone">Phone number</label>
+        <input type="tel" id="in-status-phone" inputmode="numeric" maxlength="10" placeholder="10-digit number">
+        <div class="err">Enter a valid 10-digit phone number.</div>
+      </div>
+      <div class="btn-row">
+        <button class="btn btn-ghost" onclick="goToPublic()">Back</button>
+        <button class="btn btn-primary" onclick="checkStatus()">Check status</button>
+      </div>
+      <div id="statusResults"></div>
+    </section>
+    <div class="section-address">
+      <div class="section-address-content">
+        <div class="section-address-title">Indira Gandhi Institute</div>
+        <div class="section-address-text">87/14, near Nooh Masjid, Joga Bai Extension, Block F, Jamia Nagar, Okhla, New Delhi, Delhi 110025</div>
+      </div>
+    </div>
+  </main>
+
+  <!-- PHONE CONFIRM MODAL -->
+  <div class="modal-overlay hidden" id="confirmModal">
+    <div class="modal-card">
+      <h2>Confirm your number</h2>
+      <p class="lead">This number generates your application ID and is also how you'll look up your status later.</p>
+      <div class="field" id="f-confirm-phone">
+        <label for="in-confirm-phone">Phone number</label>
+        <input type="tel" id="in-confirm-phone" inputmode="numeric" maxlength="10">
+        <div class="err">Enter a valid 10-digit phone number.</div>
+      </div>
+      <div class="btn-row">
+        <button class="btn btn-ghost" onclick="closeConfirmModal()">Cancel</button>
+        <button class="btn btn-primary" id="confirmSubmitBtn" onclick="finalizeSubmission()">Confirm and submit</button>
+      </div>
+    </div>
+  </div>
+  <main id="adminView" class="hidden">
+    <section class="card login-card" id="adminLogin">
+      <h1>Admin access</h1>
+      <p class="lead">Sign in to review admission applications.</p>
+      <div class="banner error" id="loginBanner"></div>
+      <div class="field" id="f-pass">
+        <label for="in-pass">Password</label>
+        <input type="text" id="in-pass" autocomplete="off" style="-webkit-text-security:disc;text-security:disc;">
+      </div>
+      <div class="btn-row">
+        <button class="btn btn-ghost" onclick="goToPublic()">Back</button>
+        <button class="btn btn-primary" onclick="attemptLogin()">Sign in</button>
+      </div>
+    </section>
+
+    <section id="adminDashboard" class="hidden">
+      <div class="admin-header">
+        <h1>Applications</h1>
+        <div class="admin-actions">
+          <button class="link-btn" onclick="openPasswordModal()">Change password</button>
+          <button class="link-btn" onclick="loadSubmissions(true)">Refresh</button>
+          <button class="link-btn" onclick="logoutAdmin()">Log out</button>
+        </div>
+      </div>
+
+      <div class="stats" id="statsRow"></div>
+      <div class="admin-search">
+        <input type="search" id="adminSearch" placeholder="Search admission by name, Application ID, phone, father name or course..." autocomplete="off">
+      </div>
+      <div class="tabs" id="tabsRow"></div>
+      <div id="listContainer"></div>
+    </section>
+    <div class="section-address admin-address">
+      <div class="section-address-content">
+        <div class="section-address-title">Indira Gandhi Institute</div>
+        <div class="section-address-text">87/14, near Nooh Masjid, Joga Bai Extension, Block F, Jamia Nagar, Okhla, New Delhi, Delhi 110025</div>
+      </div>
+    </div>
+  </main>
+
+  <!-- CHANGE PASSWORD MODAL -->
+  <div class="modal-overlay hidden" id="passwordModal">
+    <div class="modal-card">
+      <h2>Change admin password</h2>
+      <p class="lead">Enter the current password and choose a new password.</p>
+      <div class="banner error" id="passwordBanner"></div>
+      <div class="field">
+        <label for="in-current-pass">Current password</label>
+        <input type="password" id="in-current-pass" autocomplete="current-password">
+      </div>
+      <div class="field">
+        <label for="in-new-pass">New password</label>
+        <input type="password" id="in-new-pass" autocomplete="new-password">
+      </div>
+      <div class="field">
+        <label for="in-new-pass2">Confirm new password</label>
+        <input type="password" id="in-new-pass2" autocomplete="new-password">
+      </div>
+      <div class="btn-row">
+        <button class="btn btn-ghost" onclick="closePasswordModal()">Cancel</button>
+        <button class="btn btn-primary" onclick="changeAdminPassword()">Save password</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- REJECTION REASON MODAL -->
+  <div class="modal-overlay hidden" id="rejectModal">
+    <div class="modal-card">
+      <h2>Reject application</h2>
+      <p class="lead">Write the reason. The applicant will be able to see this reason when checking status.</p>
+      <div class="banner error" id="rejectBanner"></div>
+      <div class="field" id="f-reject-reason">
+        <label for="in-reject-reason">Reason for rejection</label>
+        <textarea id="in-reject-reason" rows="4" maxlength="500" placeholder="Enter the reason for rejecting this application..."></textarea>
+        <div class="err">Please enter a reason for rejection.</div>
+      </div>
+      <div class="btn-row">
+        <button class="btn btn-ghost" onclick="closeRejectModal()">Cancel</button>
+        <button class="btn btn-bad" onclick="saveRejectionFromModal()">Reject application</button>
+      </div>
+    </div>
+  </div>
+
+  <p class="page-footer">Indira Gandhi Institute · Computer Class Admissions.
+                                                •WhatsApp Contact +91 78277 21155 </p>
+</div>
+
+<a class="whatsapp-float"
+   href="https://wa.me/917827721155"
+   target="_blank"
+   rel="noopener noreferrer"
+   aria-label="Contact Indira Gandhi Institute on WhatsApp"
+   title="WhatsApp: +91 78277 21155">
+  <svg viewBox="0 0 32 32" aria-hidden="true">
+    <path fill="#fff" d="M19.11 17.02c-.27-.14-1.6-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.14-1.12-.41-2.14-1.31-.79-.7-1.32-1.56-1.48-1.82-.16-.27-.02-.41.12-.55.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.02-.22-.53-.45-.46-.61-.47h-.52c-.18 0-.48.07-.73.34-.25.27-.95.93-.95 2.27s.98 2.63 1.11 2.81c.14.18 1.93 2.95 4.68 4.14.65.28 1.16.45 1.56.58.66.21 1.26.18 1.73.11.53-.08 1.6-.66 1.83-1.29.23-.63.23-1.17.16-1.29-.07-.11-.25-.18-.52-.32z"/>
+    <path fill="#fff" d="M16.02 3.2c-7.06 0-12.8 5.74-12.8 12.8 0 2.26.59 4.38 1.62 6.22L3.2 28.8l6.74-1.61a12.74 12.74 0 0 0 6.08 1.54h.01c7.06 0 12.8-5.74 12.8-12.8S23.08 3.2 16.02 3.2zm0 23.38h-.01a10.57 10.57 0 0 1-5.39-1.47l-.39-.23-4 .96.99-3.9-.25-.4a10.6 10.6 0 1 1 9.05 5.04z"/>
+  </svg>
+</a>
+
+<div class="toast" id="toast"></div>
+
+<script>
+/* ---------------- CONFIG ---------------- */
+const FIREBASE_URL = 'https://uthb-971ed-default-rtdb.firebaseio.com';
+const DEFAULT_ADMIN_PASSWORD = 'igi-admin-2026'; // first-time password
+function getAdminPassword(){ return localStorage.getItem('igi_admin_password') || DEFAULT_ADMIN_PASSWORD; }
+const MAX_PDF_BYTES = 5 * 1024 * 1024; // 5 MB
+const MAX_PHOTO_BYTES = 2 * 1024 * 1024; // 2 MB
+
+// Firebase requires a ".indexOn" rule to sort/query by a child field like
+// "phone" or "formId" — without it, the REST API returns a 400 "Index not
+// defined" error, which is what "Check status" was hitting. Rather than
+// depend on a rules change, we keep a small mirror (/status_lookup) with
+// just the fields the status page needs — no photos/signatures/PDF — so a
+// plain, un-indexed read stays fast and never triggers that error.
+function statusLookupFields(s){
+  return {
+    formId: s.formId || '',
+    name: s.name || '',
+    course: s.course || '',
+    phone: s.phone || '',
+    status: s.status || 'pending',
+    createdAt: s.createdAt || 0,
+    updatedAt: s.updatedAt || 0,
+    rejectionReason: s.rejectionReason || ''
+  };
+}
+function syncStatusLookup(id, fields){
+  // Best-effort and non-blocking: if this fails, checkStatus() below still
+  // falls back to a full lookup, so nothing is ever lost.
+  fetch(`${FIREBASE_URL}/status_lookup/${encodeURIComponent(id)}.json`, {
+    method: 'PATCH',
+    headers: {'Content-Type':'application/json'},
+    body: JSON.stringify(statusLookupFields(fields))
+  }).catch(()=>{});
+}
+
+/* ---------------- STATE ---------------- */
+let selectedPdf = null;       // { base64, fileName }
+let selectedPhoto = null;     // { base64, fileName }
+let selectedFatherPhoto = null; // { base64, fileName }
+let pendingRejectId = null;
+let selectedStudentSign = null;
+let selectedFatherSign = null;
+let submissionsCache = {};    // id -> data
+let pendingSubmission = null; // fields staged while the confirm-number popup is open
+let activeFilter = 'all';
+let openEditId = null;
+
+/* ---------------- HELPERS ---------------- */
+function toast(msg){
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  clearTimeout(t._timer);
+  t._timer = setTimeout(()=>t.classList.remove('show'), 2600);
+}
+function showBanner(id,msg){
+  const el = document.getElementById(id);
+  el.textContent = msg;
+  el.classList.add('show');
+}
+function hideBanner(id){
+  document.getElementById(id).classList.remove('show');
+}
+function setFieldError(fieldId, isInvalid){
+  document.getElementById(fieldId).classList.toggle('invalid', !!isInvalid);
+}
+function generateFormId(){
+  const d = new Date();
+  const datePart = d.getFullYear().toString() +
+    String(d.getMonth()+1).padStart(2,'0') +
+    String(d.getDate()).padStart(2,'0');
+  const rand = Math.floor(1000 + Math.random()*9000);
+  return `IGI-${datePart}-${rand}`;
+}
+function formatDate(ts){
+  if(!ts) return '—';
+  const d = new Date(ts);
+  return d.toLocaleDateString(undefined,{day:'2-digit',month:'short',year:'numeric'}) +
+    ' · ' + d.toLocaleTimeString(undefined,{hour:'2-digit',minute:'2-digit'});
+}
+function readFileAsBase64(file){
+  return new Promise((resolve,reject)=>{
+    const reader = new FileReader();
+    reader.onload = () => resolve(reader.result);
+    reader.onerror = () => reject(new Error('Could not read the file.'));
+    reader.readAsDataURL(file);
+  });
+}
+// Photos/signatures were being stored at full upload size (up to 2MB each,
+// ~2.7MB once base64-encoded) which made submit, check-status and the admin
+// panel all slow. Resize to a sane max dimension and re-encode as JPEG before
+// it ever becomes base64 — usually shrinks a photo down to well under 300KB.
+function compressImageFile(file, maxDim=1000, quality=0.72){
+  return new Promise((resolve)=>{
+    const rawUrl = URL.createObjectURL(file);
+    const img = new Image();
+    img.onload = () => {
+      try{
+        let { width, height } = img;
+        if(width > maxDim || height > maxDim){
+          if(width >= height){ height = Math.round(height * (maxDim/width)); width = maxDim; }
+          else { width = Math.round(width * (maxDim/height)); height = maxDim; }
+        }
+        const canvas = document.createElement('canvas');
+        canvas.width = width; canvas.height = height;
+        const ctx = canvas.getContext('2d');
+        ctx.drawImage(img, 0, 0, width, height);
+        const dataUrl = canvas.toDataURL('image/jpeg', quality);
+        URL.revokeObjectURL(rawUrl);
+        // Only use the compressed version if it's actually smaller.
+        resolve(dataUrl);
+      }catch(e){
+        URL.revokeObjectURL(rawUrl);
+        readFileAsBase64(file).then(resolve).catch(()=>resolve(null));
+      }
+    };
+    img.onerror = () => {
+      URL.revokeObjectURL(rawUrl);
+      // Not a browser-decodable image (e.g. some HEIC files) — fall back to raw upload.
+      readFileAsBase64(file).then(resolve).catch(()=>resolve(null));
+    };
+    img.src = rawUrl;
+  });
+}
+async function readImageAsBase64Compressed(file){
+  const compressed = await compressImageFile(file);
+  if(!compressed) return readFileAsBase64(file);
+  return compressed;
+}
+
+/* ---------------- VIEW SWITCHING ---------------- */
+function goToAdmin(){
+  document.getElementById('publicView').classList.add('hidden');
+  document.getElementById('statusView').classList.add('hidden');
+  document.getElementById('adminView').classList.remove('hidden');
+  document.getElementById('adminLogin').classList.remove('hidden');
+  document.getElementById('adminDashboard').classList.add('hidden');
+  adminSearchQuery = '';
+  const adminSearch = document.getElementById('adminSearch');
+  if(adminSearch) adminSearch.value = '';
+  document.getElementById('in-pass').value = '';
+  hideBanner('loginBanner');
+}
+function goToPublic(){
+  document.getElementById('adminView').classList.add('hidden');
+  document.getElementById('statusView').classList.add('hidden');
+  document.getElementById('publicView').classList.remove('hidden');
+}
+function goToStatusCheck(){
+  document.getElementById('publicView').classList.add('hidden');
+  document.getElementById('adminView').classList.add('hidden');
+  document.getElementById('statusView').classList.remove('hidden');
+  document.getElementById('in-status-id').value = '';
+  document.getElementById('in-status-phone').value = '';
+  document.getElementById('statusResults').innerHTML = '';
+  hideBanner('statusBanner');
+}
+function logoutAdmin(){
+  goToPublic();
+}
+
+/* ---------------- PUBLIC FORM ---------------- */
+const fileInput = document.getElementById('in-pdf');
+fileInput.addEventListener('change', async () => {
+  const file = fileInput.files[0];
+  if(!file) return;
+  if(file.type !== 'application/pdf' && !file.name.toLowerCase().endsWith('.pdf')){
+    showBanner('formBanner','Please upload the Aadhar card as a PDF file.');
+    fileInput.value = '';
+    return;
+  }
+  if(file.size > MAX_PDF_BYTES){
+    showBanner('formBanner','That PDF is larger than 5 MB. Please upload a smaller file.');
+    fileInput.value = '';
+    return;
+  }
+  hideBanner('formBanner');
+  try{
+    const base64 = await readFileAsBase64(file);
+    selectedPdf = { base64, fileName: file.name };
+    document.getElementById('fileDrop').classList.add('has-file');
+    document.getElementById('fdTitle').innerHTML = `<span class="fd-name">${file.name}</span>`;
+    document.getElementById('fdSub').textContent = 'Tap to replace the file';
+    setFieldError('f-pdf', false);
+  }catch(e){
+    showBanner('formBanner', e.message || 'Could not read that file.');
+  }
+});
+
+const photoInput = document.getElementById('in-photo');
+photoInput.addEventListener('change', async () => {
+  const file = photoInput.files[0];
+  if(!file) return;
+  if(!((file.type && file.type.startsWith('image/')) || /\.(jpe?g|png|webp|gif|bmp)$/i.test(file.name||''))){
+    showBanner('formBanner','Please upload the student photo as an image file.');
+    photoInput.value = '';
+    return;
+  }
+  if(file.size > MAX_PHOTO_BYTES){
+    showBanner('formBanner','That photo is larger than 2 MB. Please upload a smaller file.');
+    photoInput.value = '';
+    return;
+  }
+  hideBanner('formBanner');
+  try{
+    const base64 = await readImageAsBase64Compressed(file);
+    selectedPhoto = { base64, fileName: file.name };
+    document.getElementById('photoDrop').classList.add('has-file');
+    document.getElementById('fdPhotoTitle').innerHTML = `<span class="fd-name">${file.name}</span>`;
+    document.getElementById('fdPhotoSub').textContent = 'Tap to replace the photo';
+    const preview = document.getElementById('photoPreview');
+    preview.src = base64;
+    preview.classList.remove('hidden');
+    setFieldError('f-photo', false);
+  }catch(e){
+    showBanner('formBanner', e.message || 'Could not read that file.');
+  }
+});
+
+
+const fatherPhotoInput = document.getElementById('in-father-photo');
+fatherPhotoInput.addEventListener('change', async () => {
+  const file = fatherPhotoInput.files[0];
+  if(!file) return;
+  if(!((file.type && file.type.startsWith('image/')) || /\.(jpe?g|png|webp|gif|bmp)$/i.test(file.name||''))){
+    showBanner('formBanner','Please upload the father / guardian photo as an image file.');
+    fatherPhotoInput.value = '';
+    return;
+  }
+  if(file.size > MAX_PHOTO_BYTES){
+    showBanner('formBanner','That father / guardian photo is larger than 2 MB.');
+    fatherPhotoInput.value = '';
+    return;
+  }
+  hideBanner('formBanner');
+  try{
+    const base64 = await readImageAsBase64Compressed(file);
+    selectedFatherPhoto = {base64, fileName:file.name};
+    document.getElementById('fatherPhotoDrop').classList.add('has-file');
+    document.getElementById('fdFatherPhotoTitle').innerHTML = `<span class="fd-name">${file.name}</span>`;
+    document.getElementById('fdFatherPhotoSub').textContent = 'Tap to replace the photo';
+    const preview = document.getElementById('fatherPhotoPreview');
+    preview.src = base64;
+    preview.classList.remove('hidden');
+    setFieldError('f-father-photo', false);
+  }catch(e){
+    showBanner('formBanner', e.message || 'Could not read that file.');
+  }
+});
+
+document.getElementById('in-phone').addEventListener('input', (e)=>{
+  e.target.value = e.target.value.replace(/\D/g,'').slice(0,10);
+});
+document.getElementById('in-aadhar').addEventListener('input', (e)=>{
+  const digits = e.target.value.replace(/\D/g,'').slice(0,12);
+  e.target.value = digits.replace(/(\d{4})(?=\d)/g,'$1 ');
+});
+
+
+function setupImageUpload(inputId, dropId, titleId, subId, previewId, stateName, fieldErrorId, labelText){
+  const input=document.getElementById(inputId);
+  if(!input) return;
+  input.addEventListener('change', async ()=>{
+    const file=input.files && input.files[0];
+    if(!file) return;
+    const looksLikeImage = (file.type && file.type.startsWith('image/')) || /\.(jpe?g|png|webp|gif|bmp)$/i.test(file.name||'');
+    if(!looksLikeImage){
+      showBanner('formBanner',`Please upload ${labelText} as JPG, PNG or another image.`);
+      input.value='';
+      return;
+    }
+    if(file.size > MAX_PHOTO_BYTES){
+      showBanner('formBanner',`That ${labelText} is larger than 2 MB.`);
+      input.value='';
+      return;
+    }
+    try{
+      const base64=await readImageAsBase64Compressed(file);
+      const value={base64,fileName:file.name};
+      if(stateName==='selectedStudentSign') selectedStudentSign=value;
+      if(stateName==='selectedFatherSign') selectedFatherSign=value;
+      const drop=document.getElementById(dropId);
+      drop.classList.add('has-file');
+      document.getElementById(titleId).innerHTML=`<span class="fd-name">${escapeHtml(file.name)}</span>`;
+      document.getElementById(subId).textContent='Tap to replace the file';
+      const preview=document.getElementById(previewId);
+      preview.src=base64;
+      preview.classList.remove('hidden');
+      setFieldError(fieldErrorId,false);
+      hideBanner('formBanner');
+    }catch(e){
+      showBanner('formBanner',e.message||'Could not read that file.');
+    }
+  });
+}
+setupImageUpload('in-student-sign','studentSignDrop','fdStudentSignTitle','fdStudentSignSub','studentSignPreview','selectedStudentSign','f-student-sign','the student signature');
+setupImageUpload('in-father-sign','fatherSignDrop','fdFatherSignTitle','fdFatherSignSub','fatherSignPreview','selectedFatherSign','f-father-sign','the father / guardian signature');
+
+document.getElementById('admissionForm').addEventListener('submit', (e)=>{
+  e.preventDefault();
+  hideBanner('formBanner');
+
+  const name = document.getElementById('in-name').value.trim();
+  const fatherName = document.getElementById('in-father').value.trim();
+  const address = document.getElementById('in-address').value.trim();
+  const phone = document.getElementById('in-phone').value.trim();
+  const aadharNumber = document.getElementById('in-aadhar').value.replace(/\D/g,'');
+  const course = document.getElementById('in-course').value.trim();
+
+  let valid = true;
+  setFieldError('f-course', !course); if(!course) valid = false;
+  setFieldError('f-name', !name); if(!name) valid = false;
+  setFieldError('f-father', !fatherName); if(!fatherName) valid = false;
+  setFieldError('f-address', !address); if(!address) valid = false;
+  setFieldError('f-phone', !/^\d{10}$/.test(phone)); if(!/^\d{10}$/.test(phone)) valid = false;
+  setFieldError('f-aadhar', !/^\d{12}$/.test(aadharNumber)); if(!/^\d{12}$/.test(aadharNumber)) valid = false;
+  setFieldError('f-photo', !selectedPhoto); if(!selectedPhoto) valid = false;
+  setFieldError('f-father-photo', !selectedFatherPhoto); if(!selectedFatherPhoto) valid = false;
+  setFieldError('f-pdf', !selectedPdf); if(!selectedPdf) valid = false;
+  setFieldError('f-student-sign', !selectedStudentSign); if(!selectedStudentSign) valid = false;
+  setFieldError('f-father-sign', !selectedFatherSign); if(!selectedFatherSign) valid = false;
+
+  if(!valid){
+    showBanner('formBanner','Please fix the highlighted fields.');
+    return;
+  }
+
+  pendingSubmission = { name, fatherName, address, aadharNumber, course };
+  document.getElementById('in-confirm-phone').value = phone;
+  setFieldError('f-confirm-phone', false);
+  document.getElementById('confirmModal').classList.remove('hidden');
+  document.getElementById('in-confirm-phone').focus();
+});
+
+document.getElementById('in-confirm-phone').addEventListener('input', (e)=>{
+  e.target.value = e.target.value.replace(/\D/g,'').slice(0,10);
+});
+
+function closeConfirmModal(){
+  document.getElementById('confirmModal').classList.add('hidden');
+}
+
+async function finalizeSubmission(){
+  const phone = document.getElementById('in-confirm-phone').value.trim();
+  if(!/^\d{10}$/.test(phone)){
+    setFieldError('f-confirm-phone', true);
+    return;
+  }
+  setFieldError('f-confirm-phone', false);
+
+  const confirmBtn = document.getElementById('confirmSubmitBtn');
+  confirmBtn.disabled = true;
+  confirmBtn.textContent = 'Submitting…';
+
+  const formId = generateFormId();
+  const payload = {
+    formId,
+    name: pendingSubmission.name,
+    course: pendingSubmission.course,
+    fatherName: pendingSubmission.fatherName,
+    address: pendingSubmission.address,
+    phone,
+    aadharNumber: pendingSubmission.aadharNumber,
+    photoBase64: selectedPhoto.base64,
+    photoFileName: selectedPhoto.fileName,
+    fatherPhotoBase64: selectedFatherPhoto.base64,
+    fatherPhotoFileName: selectedFatherPhoto.fileName,
+    studentSignBase64: selectedStudentSign.base64,
+    studentSignFileName: selectedStudentSign.fileName,
+    fatherSignBase64: selectedFatherSign.base64,
+    fatherSignFileName: selectedFatherSign.fileName,
+    pdfBase64: selectedPdf.base64,
+    pdfFileName: selectedPdf.fileName,
+    status: 'pending',
+    createdAt: Date.now(),
+    updatedAt: Date.now()
+  };
+
+  try{
+    const res = await fetch(`${FIREBASE_URL}/submissions.json`, {
+      method: 'POST',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify(payload)
+    });
+    if(!res.ok){
+      if(res.status === 401 || res.status === 403){
+        throw new Error('Firebase blocked this write — open the Realtime Database rules for the "submissions" path.');
+      }
+      throw new Error(`Submission failed (error ${res.status}). Please try again.`);
+    }
+    const created = await res.json().catch(()=>null);
+    if(created && created.name) syncStatusLookup(created.name, payload);
+    closeConfirmModal();
+    document.getElementById('successFormId').textContent = formId;
+    document.getElementById('formSection').classList.add('hidden');
+    document.getElementById('successSection').classList.remove('hidden');
+  }catch(err){
+    closeConfirmModal();
+    showBanner('formBanner', err.message || "Couldn't submit your application. Check your connection and try again.");
+  }finally{
+    confirmBtn.disabled = false;
+    confirmBtn.textContent = 'Confirm and submit';
+  }
+}
+
+document.getElementById('in-status-id').addEventListener('input',(e)=>{
+  e.target.value=e.target.value.toUpperCase().replace(/\s/g,'').slice(0,18);
+});
+document.getElementById('in-status-phone').addEventListener('input', (e)=>{
+  e.target.value = e.target.value.replace(/\D/g,'').slice(0,10);
+});
+
+async function checkStatus(){
+  hideBanner('statusBanner');
+  const idInput = document.getElementById('in-status-id').value.trim().toUpperCase();
+  const phone = document.getElementById('in-status-phone').value.trim();
+  if(!idInput && !phone){
+    showBanner('statusBanner','Enter either your application ID or your phone number.');
+    return;
+  }
+  if(phone && !/^\d{10}$/.test(phone) && !idInput){
+    setFieldError('f-status-phone', true); return;
+  }
+  setFieldError('f-status-phone', false);
+  setFieldError('f-status-id', false);
+  const resultsEl = document.getElementById('statusResults');
+  resultsEl.innerHTML = '<p class="empty">Checking…</p>';
+  try{
+    function findMatches(data){
+      let list = Object.keys(data).map(id=>({id,...data[id]}));
+      if(idInput) list = list.filter(s => String(s.formId||'').toUpperCase() === idInput);
+      else list = list.filter(s => s.phone === phone);
+      list.sort((a,b)=>(b.createdAt||0)-(a.createdAt||0));
+      return list;
+    }
+
+    // Fast path: search the small status-only mirror (no photos/PDFs), so
+    // this stays quick regardless of how many big attachments exist.
+    let matches = [];
+    try{
+      const lookupRes = await fetch(`${FIREBASE_URL}/status_lookup.json`, {cache:'no-store'});
+      if(lookupRes.ok) matches = findMatches(await lookupRes.json() || {});
+    }catch(e){ /* fall through to the full lookup below */ }
+
+    // Fallback for anything not mirrored yet (e.g. very old applications) —
+    // only downloads the full database when the fast path finds nothing.
+    if(matches.length === 0){
+      const res = await fetch(`${FIREBASE_URL}/submissions.json`);
+      if(!res.ok){
+        if(res.status===401 || res.status===403) throw new Error('Firebase blocked this read — open the Realtime Database rules for the "submissions" path.');
+        throw new Error(`Couldn’t check status (error ${res.status}).`);
+      }
+      const data = await res.json() || {};
+      matches = findMatches(data);
+      matches.forEach(s => syncStatusLookup(s.id, s)); // backfill for next time
+    }
+
+    if(matches.length===0){
+      resultsEl.innerHTML='<p class="empty">No application found. Check the ID or phone number.</p>';
+      return;
+    }
+    resultsEl.innerHTML=matches.map(s=>`
+      <div class="sub-card">
+        <div class="sub-top">
+          <div>
+            <p class="sub-name">${escapeHtml(s.name||'—')}</p>
+            <p class="sub-meta">${escapeHtml(s.formId||s.id)} · ${escapeHtml(s.course||'Course not selected')} · ${formatDate(s.createdAt)}</p>
+          </div>
+          <span class="badge ${escapeHtml(s.status||'pending')}">${escapeHtml(s.status||'pending')}</span>
+        </div>
+        <div class="sub-grid">
+          <div><div class="g-label">Application ID</div><div class="g-value">${escapeHtml(s.formId||s.id)}</div></div>
+          <div><div class="g-label">Phone</div><div class="g-value">${escapeHtml(s.phone||'—')}</div></div>
+          <div class="full"><div class="g-label">Last updated</div><div class="g-value">${formatDate(s.updatedAt)}</div></div>
+        </div>
+        ${s.status==='rejected' && s.rejectionReason ? `<div class="reason-box"><strong>Reason for rejection:</strong><br>${escapeHtml(s.rejectionReason)}</div>` : ''}
+      </div>
+    `).join('');
+  }catch(e){
+    resultsEl.innerHTML='';
+    showBanner('statusBanner',e.message||"Couldn't check status. Check your connection.");
+  }
+}
+
+function resetForm(){
+  document.getElementById('admissionForm').reset();
+  selectedPdf=null;
+  selectedPhoto=null;
+  selectedFatherPhoto=null;
+  selectedStudentSign=null;
+  selectedFatherSign=null;
+  ['in-pdf','in-photo','in-father-photo','in-student-sign','in-father-sign'].forEach(id=>{ const el=document.getElementById(id); if(el) el.value=''; });
+  pendingSubmission=null;
+  document.getElementById('fileDrop').classList.remove('has-file');
+  document.getElementById('fdTitle').textContent='Tap to upload the Aadhar card PDF';
+  document.getElementById('fdSub').textContent='PDF only, up to 5 MB';
+  document.getElementById('photoDrop').classList.remove('has-file');
+  document.getElementById('fdPhotoTitle').textContent="Tap to upload the student's photo";
+  document.getElementById('fdPhotoSub').textContent='JPG or PNG, up to 2 MB';
+  document.getElementById('fatherPhotoDrop').classList.remove('has-file');
+  document.getElementById('fdFatherPhotoTitle').textContent="Tap to upload father's / guardian's photo";
+  document.getElementById('fdFatherPhotoSub').textContent='JPG or PNG, up to 2 MB';
+  document.getElementById('studentSignDrop').classList.remove('has-file');
+  document.getElementById('fdStudentSignTitle').textContent='Tap to upload student signature';
+  document.getElementById('fdStudentSignSub').textContent='JPG or PNG, up to 2 MB';
+  document.getElementById('fatherSignDrop').classList.remove('has-file');
+  document.getElementById('fdFatherSignTitle').textContent='Tap to upload father / guardian signature';
+  document.getElementById('fdFatherSignSub').textContent='JPG or PNG, up to 2 MB';
+  ['photoPreview','fatherPhotoPreview','studentSignPreview','fatherSignPreview'].forEach(id=>{
+    const el=document.getElementById(id); el.src=''; el.classList.add('hidden');
+  });
+  ['f-course','f-name','f-father','f-father-photo','f-address','f-phone','f-aadhar','f-pdf','f-student-sign','f-father-sign'].forEach(id=>setFieldError(id,false));
+  hideBanner('formBanner');
+  document.getElementById('successSection').classList.add('hidden');
+  document.getElementById('formSection').classList.remove('hidden');
+}
+
+/* ---------------- ADMIN LOGIN ---------------- */
+function attemptLogin(){
+  const val = document.getElementById('in-pass').value;
+  if(val !== getAdminPassword()){
+    showBanner('loginBanner','Incorrect password.');
+    return;
+  }
+  hideBanner('loginBanner');
+  document.getElementById('adminLogin').classList.add('hidden');
+  document.getElementById('adminDashboard').classList.remove('hidden');
+
+  // ULTRA-FAST LOGIN: never wait for Firebase/network before showing the dashboard.
+  // The dashboard becomes interactive immediately; applications load in the background.
+  const list = document.getElementById('listContainer');
+  if(list){ list.innerHTML = '<p class="empty">Dashboard ready. Loading applications…</p>'; }
+  requestAnimationFrame(()=>{
+    setTimeout(()=>loadSubmissions(false), 900);
+  });
+}
+
+
+function openPasswordModal(){
+  document.getElementById('in-current-pass').value='';
+  document.getElementById('in-new-pass').value='';
+  document.getElementById('in-new-pass2').value='';
+  hideBanner('passwordBanner');
+  document.getElementById('passwordModal').classList.remove('hidden');
+}
+function closePasswordModal(){
+  document.getElementById('passwordModal').classList.add('hidden');
+}
+function changeAdminPassword(){
+  const current=document.getElementById('in-current-pass').value;
+  const next=document.getElementById('in-new-pass').value;
+  const next2=document.getElementById('in-new-pass2').value;
+  hideBanner('passwordBanner');
+  if(current!==getAdminPassword()){ showBanner('passwordBanner','Current password is incorrect.'); return; }
+  if(next.length<6){ showBanner('passwordBanner','New password must be at least 6 characters.'); return; }
+  if(next!==next2){ showBanner('passwordBanner','New passwords do not match.'); return; }
+  localStorage.setItem('igi_admin_password',next);
+  closePasswordModal();
+  toast('Admin password changed.');
+}
+
+/* ---------------- ADMIN DASHBOARD ---------------- */
+async function loadSubmissions(loadAll=false){
+  const list = document.getElementById('listContainer');
+  const CACHE_KEY = 'igi_submissions_cache_v3';
+  let showedCache = false;
+
+  // NEVER let a huge old localStorage cache slow down the admin panel.
+  // Only keep a small recent cache (full images/PDFs are intentionally excluded from old cache).
+  try{
+    const cached = localStorage.getItem(CACHE_KEY);
+    if(cached && cached.length < 1800000){
+      const parsed = JSON.parse(cached);
+      if(parsed && typeof parsed === 'object'){
+        submissionsCache = parsed;
+        showedCache = true;
+        renderDashboard();
+      }
+    } else if(cached){
+      localStorage.removeItem(CACHE_KEY);
+    }
+  }catch(e){
+    try{ localStorage.removeItem(CACHE_KEY); }catch(_e){}
+  }
+
+  // Dashboard is usable immediately. Firebase loading happens in the background.
+  if(!showedCache){
+    submissionsCache = {};
+    renderDashboard();
+    list.innerHTML = '<p class="empty">Loading latest applications in background…</p>';
+  }
+
+  if(!loadAll){
+    try{
+      const controller = new AbortController();
+      const timer = setTimeout(()=>controller.abort(), 10000);
+      // One request for the last 8 records, instead of 1 index fetch + 8 separate
+      // full-record fetches. Firebase filters this server-side, so far less data
+      // has to travel over the connection.
+      const res = await fetch(`${FIREBASE_URL}/submissions.json?orderBy="$key"&limitToLast=8`, {
+        cache:'no-store', signal:controller.signal
+      });
+      clearTimeout(timer);
+      if(!res.ok) throw new Error(`Load failed (error ${res.status}).`);
+
+      const latest = await res.json() || {};
+
+      if(Object.keys(latest).length){
+        submissionsCache = latest;
+        try{ localStorage.setItem(CACHE_KEY, JSON.stringify(latest)); }catch(e){}
+        renderDashboard();
+        // Keep the lightweight status-lookup mirror fresh (also backfills
+        // older applications that predate it) — fire-and-forget.
+        Object.keys(latest).forEach(id => syncStatusLookup(id, latest[id]));
+      }
+    }catch(e){
+      // Do not make the admin panel look broken because Firebase is slow.
+      if(!showedCache && !Object.keys(submissionsCache).length){
+        list.innerHTML = '<p class="empty">No cached applications. Tap Refresh to try again.</p>';
+      }
+    }
+    return;
+  }
+
+  // Manual Refresh = intentionally full database load.
+  try{
+    toast('Loading all applications…');
+    const controller = new AbortController();
+    const timer = setTimeout(()=>controller.abort(), 20000);
+    const res = await fetch(`${FIREBASE_URL}/submissions.json`, {cache:'no-store',signal:controller.signal});
+    clearTimeout(timer);
+    if(!res.ok) throw new Error(`Load failed (error ${res.status}).`);
+    const data = await res.json() || {};
+    submissionsCache = data;
+    // Backfill/refresh the lightweight status-lookup mirror for everything,
+    // so "Check status" stays fast for every application, old and new.
+    Object.keys(data).forEach(id => syncStatusLookup(id, data[id]));
+    // Do NOT store the complete database locally: Base64 photos/PDFs can make the next login very slow.
+    try{
+      const recent = {};
+      Object.keys(data).slice(-8).forEach(id=>recent[id]=data[id]);
+      localStorage.setItem(CACHE_KEY, JSON.stringify(recent));
+    }catch(e){}
+    renderDashboard();
+    toast('Applications loaded.');
+  }catch(e){
+    toast(e.name === 'AbortError' ? 'Firebase is taking too long. Try Refresh again.' : (e.message || 'Couldn’t load applications.'));
+  }
+}
+
+function renderDashboard(){
+  const all = Object.keys(submissionsCache).map(id => ({ id, ...submissionsCache[id] }));
+  all.sort((a,b) => (b.createdAt||0) - (a.createdAt||0));
+
+  const counts = { all: all.length, pending:0, confirmed:0, rejected:0, reopened:0 };
+  all.forEach(s => { if(counts[s.status] !== undefined) counts[s.status]++; });
+
+  document.getElementById('statsRow').innerHTML = `
+    <div class="stat"><div class="stat-num">${counts.all}</div><div class="stat-label">Total</div></div>
+    <div class="stat"><div class="stat-num">${counts.pending}</div><div class="stat-label">Pending</div></div>
+    <div class="stat"><div class="stat-num">${counts.confirmed}</div><div class="stat-label">Confirmed</div></div>
+    <div class="stat"><div class="stat-num">${counts.rejected}</div><div class="stat-label">Rejected</div></div>
+    <div class="stat"><div class="stat-num">${counts.reopened}</div><div class="stat-label">Reopened</div></div>
+  `;
+
+  const tabs = [
+    ['all','All'],['pending','Pending'],['confirmed','Confirmed'],
+    ['rejected','Rejected'],['reopened','Reopened']
+  ];
+  document.getElementById('tabsRow').innerHTML = tabs.map(([key,label])=>
+    `<button class="tab ${activeFilter===key?'active':''}" onclick="setFilter('${key}')">${label} (${counts[key]})</button>`
+  ).join('');
+
+  const statusFiltered = activeFilter === 'all' ? all : all.filter(s => s.status === activeFilter);
+  const list = document.getElementById('listContainer');
+
+  // Cancel a previous progressive render.
+  if(window.adminRenderTimer) clearTimeout(window.adminRenderTimer);
+
+  // Render an empty container immediately so the UI never freezes.
+  list.innerHTML = '';
+  if(!statusFiltered.length){
+    list.innerHTML = '<p class="empty">No applications found.</p>';
+    return;
+  }
+
+  let index = 0;
+  const CHUNK = 5;
+
+  function renderChunk(){
+    const fragment = document.createDocumentFragment();
+    const stop = Math.min(index + CHUNK, statusFiltered.length);
+
+    for(; index < stop; index++){
+      const s = statusFiltered[index];
+      const searchable = [];
+      Object.keys(s || {}).forEach(key => {
+        const value = s[key];
+        if(key.toLowerCase().includes('base64')) return;
+        if(typeof value === 'string' || typeof value === 'number' || typeof value === 'boolean'){
+          searchable.push(String(value));
+        }
+      });
+
+      const wrap = document.createElement('div');
+      wrap.className = 'admin-card-wrap';
+      wrap.dataset.adminSearch = searchable.join(' ').toLowerCase();
+      wrap.innerHTML = renderCard(s);
+      fragment.appendChild(wrap);
+    }
+
+    list.appendChild(fragment);
+
+    // Yield to the browser between chunks so typing/scrolling stays smooth.
+    if(index < statusFiltered.length){
+      window.adminRenderTimer = setTimeout(renderChunk, 0);
+    }else{
+      applyAdminSearchFast();
+    }
+  }
+
+  renderChunk();
+}
+
+function setFilter(key){
+  activeFilter = key;
+  renderDashboard();
+}
+
+function renderCard(s){
+  const isRejected = s.status === 'rejected';
+  const isConfirmed = s.status === 'confirmed';
+  const canConfirm = !isRejected;
+  const canReject = !isRejected && !isConfirmed;
+  return `
+  <div class="sub-card">
+    <div class="sub-top">
+      <div style="display:flex;gap:12px;align-items:flex-start;">
+        ${s.photoBase64 ? `<img src="${s.photoBase64}" alt="" style="width:54px;height:54px;border:3px solid #111;border-radius:10px;object-fit:cover;flex-shrink:0;">` : ''}
+        <div>
+          <p class="sub-name">${escapeHtml(s.name||'—')}</p>
+          <p class="sub-meta">${escapeHtml(s.formId||s.id)} · ${formatDate(s.createdAt)}</p>
+        </div>
+      </div>
+      <span class="badge ${escapeHtml(s.status||'pending')}">${escapeHtml(s.status||'pending')}</span>
+    </div>
+    <div class="sub-grid">
+      <div><div class="g-label">Father's name</div><div class="g-value">${escapeHtml(s.fatherName||'—')}</div></div>
+      <div><div class="g-label">Course</div><div class="g-value">${escapeHtml(s.course||'—')}</div></div>
+      <div><div class="g-label">Phone</div><div class="g-value">${escapeHtml(s.phone||'—')}</div></div>
+      <div><div class="g-label">Aadhar number</div><div class="g-value">${escapeHtml(s.aadharNumber||'—')}</div></div>
+      <div><div class="g-label">Last updated</div><div class="g-value">${formatDate(s.updatedAt)}</div></div>
+      <div class="full"><div class="g-label">Address</div><div class="g-value">${escapeHtml(s.address||'—')}</div></div>
+    </div>
+    ${s.rejectionReason ? `<div class="reason-box"><strong>Rejection reason:</strong><br>${escapeHtml(s.rejectionReason)}</div>` : ''}
+    <div class="signature-row">
+      ${s.fatherPhotoBase64 ? `<div class="signature-box"><div class="g-label">Father photo</div><img src="${s.fatherPhotoBase64}" alt="Father photo"></div>` : ''}
+      ${s.studentSignBase64 ? `<div class="signature-box"><div class="g-label">Student signature</div><img src="${s.studentSignBase64}" alt="Student signature"></div>` : ''}
+      ${s.fatherSignBase64 ? `<div class="signature-box"><div class="g-label">Father signature</div><img src="${s.fatherSignBase64}" alt="Father signature"></div>` : ''}
+    </div>
+    <div class="btn-row" style="margin-top:12px;">
+      ${s.photoBase64 ? `<a class="btn btn-ghost btn-sm" href="${s.photoBase64}" download="${escapeHtml(s.photoFileName||(s.formId+'-photo.jpg'))}">Student photo</a>` : ''}
+      ${s.fatherPhotoBase64 ? `<a class="btn btn-ghost btn-sm" href="${s.fatherPhotoBase64}" download="${escapeHtml(s.fatherPhotoFileName||(s.formId+'-father-photo.jpg'))}">Father photo</a>` : ''}
+      ${s.pdfBase64 ? `<a class="btn btn-ghost btn-sm" href="${s.pdfBase64}" download="${escapeHtml(s.pdfFileName||(s.formId+'.pdf'))}">Aadhar PDF</a>` : ''}
+      ${s.studentSignBase64 ? `<a class="btn btn-ghost btn-sm" href="${s.studentSignBase64}" download="${escapeHtml(s.studentSignFileName||(s.formId+'-student-sign.png'))}">Student signature</a>` : ''}
+      ${s.fatherSignBase64 ? `<a class="btn btn-ghost btn-sm" href="${s.fatherSignBase64}" download="${escapeHtml(s.fatherSignFileName||(s.formId+'-father-sign.png'))}">Father signature</a>` : ''}
+      ${canConfirm ? `<button class="btn btn-ok btn-sm" onclick="confirmSubmission('${s.id}')">Confirm</button>` : ''}
+      ${isRejected ? `<button class="btn btn-reopen btn-sm" onclick="reopenSubmission('${s.id}')">Reopen</button>` : ''}
+      ${canReject ? `<button class="btn btn-bad btn-sm" onclick="openRejectModal('${s.id}')">Reject</button>` : ''}
+    </div>
+  </div>`;
+}
+
+async function confirmSubmission(id){
+  await patchSubmission(id,{status:'confirmed',rejectionReason:'',updatedAt:Date.now(),confirmedAt:Date.now()});
+  toast('Marked as confirmed.');
+}
+
+function openRejectModal(id){
+  pendingRejectId=id;
+  document.getElementById('in-reject-reason').value='';
+  setFieldError('f-reject-reason',false);
+  document.getElementById('rejectModal').classList.remove('hidden');
+  document.getElementById('in-reject-reason').focus();
+}
+function closeRejectModal(){
+  pendingRejectId=null;
+  document.getElementById('rejectModal').classList.add('hidden');
+}
+async function saveRejectionFromModal(){
+  const reason=document.getElementById('in-reject-reason').value.trim();
+  if(!reason){ setFieldError('f-reject-reason',true); return; }
+  if(!pendingRejectId) return;
+  const id=pendingRejectId;
+  await patchSubmission(id,{status:'rejected',rejectionReason:reason,updatedAt:Date.now(),rejectedAt:Date.now()});
+  closeRejectModal();
+  toast('Marked as rejected. Confirm is hidden until you reopen it.');
+}
+async function reopenSubmission(id){
+  await patchSubmission(id,{status:'reopened',updatedAt:Date.now(),reopenedAt:Date.now()});
+  toast('Application reopened. Confirm is available now.');
+}
+
+async function patchSubmission(id, patch){
+  try{
+    const res = await fetch(`${FIREBASE_URL}/submissions/${id}.json`, {
+      method: 'PATCH',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify(patch)
+    });
+    if(!res.ok) throw new Error('update failed');
+    Object.assign(submissionsCache[id], patch);
+    renderDashboard();
+    syncStatusLookup(id, submissionsCache[id]);
+  }catch(e){
+    toast("Couldn't save that change. Check your connection.");
+  }
+}
+
+function escapeHtml(str){
+  return String(str)
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
+    .replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+}
+
+let adminSearchFrame = 0;
+function applyAdminSearchFast(){
+  const q = adminSearchQuery.trim().toLowerCase();
+  const wraps = document.querySelectorAll('#listContainer .admin-card-wrap');
+  let visible = 0;
+  wraps.forEach(wrap => {
+    const match = !q || wrap.dataset.adminSearch.includes(q);
+    wrap.classList.toggle('admin-search-hidden', !match);
+    if(match) visible++;
+  });
+  const oldEmpty = document.getElementById('adminSearchEmpty');
+  if(oldEmpty) oldEmpty.remove();
+  if(q && visible === 0){
+    const empty = document.createElement('p');
+    empty.className = 'empty';
+    empty.id = 'adminSearchEmpty';
+    empty.textContent = 'No matching applications found.';
+    document.getElementById('listContainer').appendChild(empty);
+  }
+}
+
+const adminSearchInput = document.getElementById('adminSearch');
+if(adminSearchInput){
+  adminSearchInput.addEventListener('input', function(){
+    adminSearchQuery = this.value;
+    cancelAnimationFrame(adminSearchFrame);
+    adminSearchFrame = requestAnimationFrame(applyAdminSearchFast);
+  });
+}
+</script>
+</body>
+</html>
